@@ -52,7 +52,7 @@ Things you may want to cover:
 |category_id      |integer    |null: false                    |
 |status_id        |integer    |null: false                    |
 |shipping_cost_id |integer    |null: false                    |
-|shipping_area_id |integer    |null: false                    |
+|prefecture_id    |integer    |null: false                    |
 |shipping_date_id |integer    |null: false                    |
 |price            |integer    |null: false                    |
 |user             |references |null: false, foreign_key: true |
@@ -66,7 +66,7 @@ Things you may want to cover:
 - belongs_to :category
 - belongs_to :status
 - belongs_to :shipping_cost
-- belongs_to :shipping_area
+- belongs_to :prefecture
 - belongs_to :shipping_date
 
 ## orders テーブル
