@@ -1,0 +1,39 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        familyname: 苗字
+        firstname: 名前
+        familyname_kana: 苗字(カナ)
+        firstname_kana: 名前(カナ)
+        birthday: 生年月日
+      item:
+        image: 商品画像
+        itemname: 商品名
+        explanation: 商品の説明
+        category_id: カテゴリー
+        status_id: 商品の状態
+        shipping_cost_id: 配送料の負担
+        prefecture_id: 発送元の地域
+        shipping_date_id: 発送までの日数
+        price: 販売価格
+    errors:
+      models:
+        item:
+          attributes:
+            price:
+              format: '%{message}'
+              greater_than_or_equal_to: は300円以上にしてください。
+              less_than_or_equal_to: は9,999,999円以下にしてください。
+  activemodel:
+    models:
+      order_address: "商品購入"
+    attributes:
+      order_address:
+        post_code: 郵便番号
+        prefecture_id: 都道府県
+        city: 市区町村
+        house_number: 番地
+        phone_number: 電話番号
+        token: クレジットカード情報
