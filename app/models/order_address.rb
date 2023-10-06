@@ -12,7 +12,7 @@ class OrderAddress
     validates :phone_number, format: { with: /\A\d{10,11}\z/, message: 'は無効です。ハイフン(-)は含めないでください。' }
     validates :token
   end
-  validates :prefecture_id, numericality: { other_than: 1, message: "を選択してください。" }
+  validates :prefecture_id, numericality: { other_than: 1, message: 'を選択してください。' }
 
   def save
     order = Order.create(user_id: user_id, item_id: item_id)

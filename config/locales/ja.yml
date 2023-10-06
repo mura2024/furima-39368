@@ -24,8 +24,10 @@ ja:
           attributes:
             price:
               format: '%{message}'
-              greater_than_or_equal_to: は300円以上にしてください。
-              less_than_or_equal_to: は9,999,999円以下にしてください。
+              blank: 販売価格を入力してください。
+              not_a_number: 販売価格は数値で入力してください。
+              greater_than_or_equal_to: 販売価格は300円以上にしてください。
+              less_than_or_equal_to: 販売価格は9,999,999円以下にしてください。
   activemodel:
     models:
       order_address: "商品購入"
