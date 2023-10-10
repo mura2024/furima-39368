@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :search_product, only: [:index, :show, :search]
 
   def index
     @items = Item.includes(:user).order('created_at DESC')
@@ -55,4 +56,10 @@ class ItemsController < ApplicationController
 
     redirect_to root_path
   end
+
+  def search_product
+    @q = Item.ransack(params[:q])
+    @results = @q.result
+  end
+
 end
